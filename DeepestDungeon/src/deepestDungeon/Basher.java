@@ -6,5 +6,10 @@ public class Basher extends Adventurer {
 		super(hp, energy, attack);
 		this.movez.add(new BashAttack());
 	}
+	
+	public Basher(){
+		super();
+		this.movez.add(new BashAttack());
+	}
 
 }

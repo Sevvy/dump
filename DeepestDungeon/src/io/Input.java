@@ -1,4 +1,4 @@
-package deepestDungeon;
+package io;
 
 import java.util.Scanner;
 
@@ -36,6 +36,10 @@ public abstract class Input {
 	
 	public static int getNextInt(){
 		return getNextInt(false);
+	}
+	public static boolean isInt(String input) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

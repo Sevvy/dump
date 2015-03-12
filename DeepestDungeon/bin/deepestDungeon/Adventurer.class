@@ -1,0 +1,8 @@
+Êþº¾   3 +  deepestDungeon/Adventurer  deepestDungeon/Entity movez Ljava/util/ArrayList; 	Signature ,Ljava/util/ArrayList<LdeepestDungeon/Move;>; quirkz -Ljava/util/ArrayList<LdeepestDungeon/Quirk;>; fear I threat attack <init> (III)V Code
+     (II)V	     LineNumberTable LocalVariableTable this LdeepestDungeon/Adventurer; hp energy ()V
+  !   deepestDungeon/Mathz " # random (II)I getResponse damage i type onDeath 
+SourceFile Adventurer.java !                	       
+       
+                 \     *· *µ ±           
+        *                                  N     *
+(¸ ¸ · *¸ µ ±                             $      +      ±                         %      ?      ±                            &      '    (      +      ±                         )    *

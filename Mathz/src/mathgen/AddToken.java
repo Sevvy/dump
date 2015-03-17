@@ -1,5 +1,7 @@
 package mathgen;
 
+import java.util.ArrayList;
+
 public class AddToken extends Token {
 
 	public AddToken(String... args) {
@@ -7,10 +9,17 @@ public class AddToken extends Token {
 		// TODO Auto-generated constructor stub
 	}
 	protected static boolean validate(String[] args) {
-		String s = format(args);
-		if(){
-			
+		ArrayList<String> a = format(args);
+		if(!isOperater(a.get(0))){
+			return false;
 		}
+		int i;
+		for(i=0;i < a.size(); i++){
+			if(!isAlphaNum(a.get(i))){
+				
+			}
+		}
+		return true;
 
 	}
 	

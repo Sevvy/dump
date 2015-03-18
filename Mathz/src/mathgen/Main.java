@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Main {
 	ArrayList<Component> menuScreen = new ArrayList<>();
 	ArrayList<Component> questionScreen = new ArrayList<>();
+	ArrayList<Component> testGenScreen = new ArrayList<>();
 	MainUI ui;
 	Container cp;
 	public static void main(String[] args) {
@@ -15,7 +16,8 @@ public class Main {
 		
 	}
 	private void run() {
-		MainUI ui = MainUI.getInstance();
+		ui = MainUI.getInstance();
+		System.out.println("ui:" + ui.toString());
 		initQuestionScreen();
 		initMenuScreen();
 
@@ -33,8 +35,9 @@ public class Main {
 		for(Component c : args){
 			menuScreen.add(c);
 		}
-		Button b1 = new TransitionButton("test", questionScreen,ui); 
+		Button b1 = new TransitionButton("Start Test", questionScreen,ui); 
 		b1.setLocation(100,100);
+		b1.set
 		menuScreen.add(b1);
 		Debug.printIterable(menuScreen);
 	}

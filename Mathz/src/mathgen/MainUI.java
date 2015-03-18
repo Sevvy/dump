@@ -92,6 +92,7 @@ public class MainUI extends JFrame implements ActionListener, ItemListener, KeyL
 	
 	public void loadNewState(ArrayList<Component> a){	//clears the screen and presents the next menu
 		this.getContentPane().removeAll();
+		this.getContentPane().repaint();
 		for(Component c : a){
 			this.getContentPane().add(c);
 		}

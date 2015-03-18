@@ -1,5 +1,6 @@
 package mathgen;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,8 +25,8 @@ public class MainUI extends JFrame implements ActionListener, ItemListener, KeyL
 	
 	private MainUI() {
 		super("MathPr");
-		Button b = new Button("hello",this);
-		this.add(b);
+		this.setBackground(new Color(0, 0, 0));
+		this.getContentPane().setLayout(null);
 	}
 
 	@Override
@@ -83,16 +84,18 @@ public class MainUI extends JFrame implements ActionListener, ItemListener, KeyL
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		System.out.println("button pressed.");
 		Button b = (Button)(e.getSource());
 		b.onClick();
 		
 	}
 	
-	public void loadNewState(ArrayList<Component> a){
-		this.removeAll();
+	public void loadNewState(ArrayList<Component> a){	//clears the screen and presents the next menu
+		this.getContentPane().removeAll();
 		for(Component c : a){
-			this.add(c);
+			this.getContentPane().add(c);
 		}
+		
 	}
 
 }

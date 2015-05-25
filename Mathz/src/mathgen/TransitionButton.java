@@ -38,6 +38,5 @@ public class TransitionButton extends Button {
 	
 	public void onClick(){
 		owner.loadNewState(target);
-		System.out.println("transitionbutton");
 	}
 }

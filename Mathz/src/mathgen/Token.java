@@ -16,10 +16,10 @@ public abstract class Token {
 		return false;
 	}
 	protected static boolean isAlphaNum(String s){
-		
+		return true;
 	}
 	protected final ArrayList<String> compress(ArrayList<String> a){
-		
+		return null;
 	}
 	protected static ArrayList<String> format(String... args){ //Formats string by stripping spaces, then splitting into array based off individual symbols. single alphanumeric groups are 1 symbol, symbols are 1 symbol.
 		ArrayList<String> token = new ArrayList<String>();

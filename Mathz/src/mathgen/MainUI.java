@@ -2,6 +2,7 @@ package mathgen;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-public class MainUI extends JFrame implements ActionListener, ItemListener, KeyListener, MouseListener{//a bootiful singleton class
+public class MainUI extends JFrame implements ActionListener, ItemListener, KeyListener, MouseListener{//and inside was a bootiful singleton class
 	
 	static MainUI mainUI;
 	
@@ -84,19 +85,28 @@ public class MainUI extends JFrame implements ActionListener, ItemListener, KeyL
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("button pressed.");
-		Button b = (Button)(e.getSource());
-		b.onClick();
+		if(e.getSource() instanceof Button){
+			((Button) e.getSource()).onClick();
+		}
+		if(e.getSource() instanceof Typer){
+			
+		}
 		
 	}
 	
-	public void loadNewState(ArrayList<Component> a){	//clears the screen and presents the next menu
+	public void loadNewState(ArrayList<Component> a){	//clears the screen and presents the next display
 		this.getContentPane().removeAll();
-		this.getContentPane().repaint();
 		for(Component c : a){
 			this.getContentPane().add(c);
 		}
+		this.repaint();
 		
+	}
+	public void paint(Graphics g){
+		super.paint(g);
+//		for(Component c:this.getContentPane().getComponents()){
+//			c.setLocation((int)(Math.random()*1000),(int)(Math.random()*1000));
+//		}
 	}
 
 }

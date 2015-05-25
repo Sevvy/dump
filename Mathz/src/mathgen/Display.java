@@ -7,5 +7,11 @@ public class Display {	//may be used
 	public Display() {
 		// TODO Auto-generated constructor stub
 	}
+	public Display(Container... e){
+		for (Container c : e){
+			this.elements.add(c);
+			
+		}
+	}
 
 }

@@ -38,22 +38,16 @@ public abstract class Button extends JButton {	//a better version of JButton cla
 	
 	protected void init(MainUI owner){ //too lazy to edit all the constructors, sooooooooo:
 		this.owner=owner;
-		System.out.println(owner);
 		this.addActionListener(owner);
-//		this.addActionListener(new ActionListener(){
-//
-//			@Override
-//			public void actionPerformed(ActionEvent e) {
-//				onClick();
-//				
-//			}
-//			
-//		});
 		this.setSize(300,100); //default size
 		this.setVisible(true);
 		this.setLocation(0,0);//default place
 	}
 	
-	public void onClick(){System.out.println("test");}
+	public abstract void onClick();
+	
+	public void setCentre(){
+		this.setBounds((owner.getSize().width - this.getBounds().width)/2,this.getBounds().y,this.getBounds().width,this.getBounds().height);
+	}
 
 }

@@ -1,6 +1,5 @@
 package mathgen;
 
-import java.awt.Component;
 import java.awt.Container;
 import java.util.ArrayList;
 
@@ -9,29 +8,29 @@ import javax.swing.Icon;
 
 public class TransitionButton extends Button {
 	
-	public ArrayList<Component> target;
+	public Display target;
 
-	public TransitionButton(ArrayList<Component> target, MainUI owner) {
+	public TransitionButton(Display target, MainUI owner) {
 		super(owner);
 		this.target = target;
 	}
 
-	public TransitionButton(Icon arg0, ArrayList<Component> target, MainUI owner) {
+	public TransitionButton(Icon arg0, Display target, MainUI owner) {
 		super(arg0, owner);
 		this.target = target;
 	}
 
-	public TransitionButton(String arg0, ArrayList<Component> target, MainUI owner) {
+	public TransitionButton(String arg0, Display target, MainUI owner) {
 		super(arg0, owner);
 		this.target = target;
 	}
 
-	public TransitionButton(Action arg0, ArrayList<Component> target, MainUI owner) {
+	public TransitionButton(Action arg0, Display target, MainUI owner) {
 		super(arg0, owner);
 		this.target = target;
 	}
 
-	public TransitionButton(String arg0, Icon arg1, ArrayList<Component> target, MainUI owner) {
+	public TransitionButton(String arg0, Icon arg1, Display target, MainUI owner) {
 		super(arg0, arg1, owner);
 		this.target = target;
 	}

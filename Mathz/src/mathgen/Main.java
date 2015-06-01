@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import javax.swing.JTextField;
 
 public class Main {
-	ArrayList<Component> menuScreen = new ArrayList<>();
-	ArrayList<Component> questionScreen = new ArrayList<>();
-	ArrayList<Component> testGenScreen = new ArrayList<>();
+	Display menuScreen = new Display();
+	Display questionScreen = new Display();
+	Display testGenScreen = new Display();
 	MainUI ui;
 	Container cp;
 	public static void main(String[] args) {
@@ -74,6 +74,7 @@ public class Main {
 			questionScreen.add(c);
 		}
 		Button b = new TransitionButton("back", menuScreen,ui);
+		System.out.println(b);
 		questionScreen.add(b);
 		
 		

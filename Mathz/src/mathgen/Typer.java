@@ -53,7 +53,12 @@ public class Typer extends JTextField {
 	protected void check(){	//TODO:proper resizing method
 //		if(this.getText().length() > this.getBounds().width / 7){
 //			this.setBounds(this.getBounds().x,this.getBounds().y,this.getBounds().width+200,this.getBounds().height);
-//		}
+//		}           x^2 + (x-1)^3 - 4 = 8
+ 	}
+	
+	public void onEnter(){
+		Display d = new Display();
+		owner.loadNewState(d); 
 	}
 	
 	public void setCentre(){

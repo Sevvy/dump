@@ -35,68 +35,59 @@ public class MainUI extends JFrame implements ActionListener, ItemListener, KeyL
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void keyPressed(KeyEvent e) {
 		
 	}
-
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void itemStateChanged(ItemEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() instanceof Button){
 			((Button) e.getSource()).onClick();
 		}
 		if(e.getSource() instanceof Typer){
-			
+			((Typer) e.getSource()).onEnter();
 		}
 		
 	}
 	
-	public void loadNewState(ArrayList<Component> a){	//clears the screen and presents the next display
+	public void loadNewState(Display d){	//clears the screen and presents the next display
 		this.getContentPane().removeAll();
-		for(Component c : a){
+		for(Component c : d.elements){
 			this.getContentPane().add(c);
 		}
 		this.repaint();
